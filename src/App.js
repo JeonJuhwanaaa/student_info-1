@@ -1,9 +1,9 @@
-import StudentArrayPage2 from "./pages/StudentArrayPage2";
+import StudentArrayPage3 from "./pages/StudentArrayPage3";
 
 
 function App() {
   return(
-    <StudentArrayPage2/>
+    <StudentArrayPage3 />
   );
 }
 
