@@ -1,4 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
+import StudentInfo from '../components/StudentInfo';
+import InfoInput from '../components/InfoInput';
+import InfoButtons from '../components/InfoButtons';
 
 function StudentPage(props) {
 
@@ -17,7 +20,7 @@ function StudentPage(props) {
         address: useRef()
       }
     
-      useEffectect(() => {
+      useEffect(() => {
         console.log(inputRef.current);
       }, []);
     
@@ -56,7 +59,7 @@ function StudentPage(props) {
           <StudentInfo title="나이" text={student.age}/>
           <StudentInfo title="주소" text={student.address}/>
     
-          <InfoInput 
+          <InfoInput
             name={"name"} 
             onChange={handleInputChange}
             value={inputValues.name}
@@ -79,7 +82,7 @@ function StudentPage(props) {
             placeholder='주소'
             inputRef={inputRef.address}
           />
-    
+          
           <InfoButtons>
             <button onClick={handleOnOk}>추가</button>
             <button onClick={handleOnClean}>비우기</button>
